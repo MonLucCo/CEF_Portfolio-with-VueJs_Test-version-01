@@ -63,4 +63,8 @@ export default {
   text-decoration: none;
   color: inherit;
 }
+
+#presentation-contact a:hover {
+  opacity: 60%;
+}
 </style>
