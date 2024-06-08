@@ -1,8 +1,8 @@
 <template>
   <div class="presentation-texte">
-    <h1>perLucCo en quelques mots</h1>
+    <h1>PerLucCo en quelques mots</h1>
     <h2>Développeur Web et Web Mobile</h2>
-    <pre>Après une activité professionnelle de 40 ans...</pre>
+    <pre>Après une activité professionnelle de 40 ans, une reconversion...</pre>
   </div>
 </template>
 

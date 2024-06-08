@@ -1,12 +1,21 @@
 <template>
   <div class="about">
-    <h1>
-      This is an about page. <br />Presentation with some details on which is PerLucCo
-    </h1>
-    <comp-presentation-texte />
-    <comp-presentation-competences />
-    <comp-presentation-techno />
-    <comp-presentation-services />
+    <div class="about-container flex-container">
+      <div class="container-presentation col-2 flex-item">
+        <h1>
+          This is an about page. <br />Presentation with some details on which is PerLucCo
+        </h1>
+        <comp-presentation-texte class="transfo-1" />
+        <comp-presentation-competences />
+      </div>
+      <div class="container-presentation col-1 flex-item">
+        <h1>Main skills used for my activities</h1>
+        <comp-presentation-techno class="transfo-2" />
+      </div>
+      <div class="container-presentation col-2">
+        <comp-presentation-services class="flex-ligne" />
+      </div>
+    </div>
   </div>
 </template>
 
@@ -24,3 +33,50 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.about-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.flex-container {
+  flex-wrap: wrap;
+}
+
+.container-presentation {
+  border: 1px solid;
+  padding: 5px;
+}
+
+.col-1 {
+  flex: 1;
+}
+
+.col-2 {
+  flex: 2;
+}
+
+.flex-item {
+  flex-basis: 50%;
+}
+
+.flex-ligne {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1;
+}
+
+.transfo-1,
+h1 {
+  transform: scale(0.85);
+}
+
+.transfo-2 {
+  transform: scale(0.75);
+}
+
+.transfo-3 {
+  transform: scale(0.65);
+}
+</style>
