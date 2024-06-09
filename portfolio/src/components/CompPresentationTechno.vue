@@ -147,6 +147,6 @@ export default {
   padding: 5px 10px 10px 10px;
   border: 1px solid silver;
   border-radius: 25% 25% 45% 40%;
-  background-color: rgb(12, 25, 83);
+  background-color: green;
 }
 </style>
