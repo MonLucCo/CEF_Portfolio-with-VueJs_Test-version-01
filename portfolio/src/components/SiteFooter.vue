@@ -19,7 +19,7 @@
 footer {
   display: flex;
   justify-content: space-around;
-  background-color: rgb(117, 117, 117);
+  background-color: lightslategray;
   border-top: thick double lightgray;
 }
 p,
