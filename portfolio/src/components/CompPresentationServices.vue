@@ -11,22 +11,16 @@
       <h2>{{ item.titre }}</h2>
       <img :src="item.image" alt="Image de l'activité" />
       <p>{{ item.text }}</p>
-      <comp-modal-service
-        v-if="activeModal === index"
-        :title="item.titre"
-        :text="item.text"
-        @close="activeModal = null"
-      />
     </div>
   </div>
 </template>
 
 <script>
-import CompModalService from "./CompModalService.vue";
+import CompModalWork from "./CompModalWork.vue";
 
 export default {
   components: {
-    CompModalService,
+    CompModalWork,
   },
   data() {
     return {
@@ -34,35 +28,24 @@ export default {
       activeModal: null,
       items: [
         {
-          titre: "gestion du temps",
-          text: "assistance à la gestion du temps...",
-          image: "/src/assets/images/Avatar_About_16.png",
+          titre: "gestion de projet Web",
+          text: "assistance à la gestion et à la conception de projet web...",
+          image: "/src/assets/images/Avatar_About_31.png",
         },
         {
-          titre: "organisation des activités",
-          text: "organisation des activités de projets...",
-          image: "/src/assets/images/Avatar_About_17.png",
+          titre: "développement front-end",
+          text: "conception et développement front-end : design, UI/UX...",
+          image: "/src/assets/images/Avatar_About_32.png",
         },
         {
-          titre: "réduction des charges",
-          text:
-            "participation à la réduction des charges par transformation numérique...",
-          image: "/src/assets/images/Avatar_About_22.png",
+          titre: "développement back-end",
+          text: "conception et développement back-end : données, services, sécurité...",
+          image: "/src/assets/images/Avatar_About_24.png",
         },
         {
-          titre: "sécurisation des accès",
-          text: "développement de la sécurisation des accès web et web mobile...",
-          image: "/src/assets/images/Avatar_About_26.png",
-        },
-        {
-          titre: "récompense des employés",
-          text: "assistance au développement de la récompense des employés...",
-          image: "/src/assets/images/Avatar_About_27.png",
-        },
-        {
-          titre: "développement de projet",
-          text: "conception, codage et développement de projets web et mobile...",
-          image: "/src/assets/images/Avatar_About_25.png",
+          titre: "maintenance et service Web",
+          text: "maintenance système web et assistance utilisateur back-office...",
+          image: "/src/assets/images/Avatar_About_37.png",
         },
         // ajoutez plus de diapositives ici...
       ],
