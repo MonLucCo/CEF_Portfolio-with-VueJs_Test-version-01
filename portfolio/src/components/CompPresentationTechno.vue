@@ -4,7 +4,7 @@
       <p>{{ skill.label }}</p>
       <div id="techno-skill">
         <!-- <elem-gauge-circular :valeur="skill.value" :gabarit="skill.gabarit" :afficheValeur="skill.affiche"
-                    :taille="100" :positionTexte="skill.position" :image="skill.image" /> -->
+                  :taille="100" :positionTexte="skill.position" :image="skill.image" /> -->
         <elem-gauge-circular-logo
           :valeur="skill.value"
           :gabarit="skill.gabarit"
@@ -147,6 +147,6 @@ export default {
   padding: 5px 10px 10px 10px;
   border: 1px solid silver;
   border-radius: 25% 25% 45% 40%;
-  background-color: green;
+  background-color: rgb(12, 25, 83);
 }
 </style>
