@@ -2,14 +2,8 @@
   <form @submit.prevent="prepareEmail" class="email-form">
     <div class="flex-container">
       <div class="flex-item">
-        <label for="fullName" class="obligatoire">Nom complet:</label>
-        <input
-          id="fullName"
-          v-model="email.fullName"
-          type="text"
-          required
-          class="input-field"
-        />
+        <label for="fullName">Nom complet:</label>
+        <input id="fullName" v-model="email.fullName" type="text" class="input-field" />
       </div>
       <div class="flex-item">
         <label for="emailAddress" class="obligatoire">Adresse email:</label>
@@ -20,6 +14,7 @@
           required
           class="input-field"
         />
+        <!-- <span v-if="emailError">{{ emailError }}</span> -->
       </div>
     </div>
     <div class="flex-container">
@@ -36,7 +31,7 @@
     </div>
     <div class="flex-container">
       <div class="flex-item full-width">
-        <label for="body">Texte du message:</label>
+        <label for="body" class="obligatoire">Texte du message:</label>
         <textarea id="body" v-model="email.body" required class="input-field"></textarea>
       </div>
     </div>
@@ -44,12 +39,15 @@
       <span class="obligatoire">Les champs marqué d'un (</span> ) sont à compléter
       obligatoirement
     </p>
-    <button type="submit" class="submit-button">Préparer l'email</button>
+    <button type="submit" class="submit-button">
+      Préparer l'email, puis retour à l'accueil
+    </button>
   </form>
 </template>
 
 <script>
-import { ref } from "vue";
+import router from "@/router";
+import { ref, watch } from "vue";
 
 export default {
   setup() {
@@ -60,13 +58,37 @@ export default {
       body: "",
     });
 
+    // const emailError = ref('');
+
+    // watch(() => email.value.emailAddress, (newValue) => {
+    //     if (newValue && !/^\S+@\S+\.\S+$/.test(newValue)) {
+    //         emailError.value = 'Veuillez entrer une adresse email valide.';
+    //     } else {
+    //         emailError.value = '';
+    //     }
+    // });
+
+    // const isFormInvalid = computed(() => {
+    //     return !email.value.emailAddress || !email.value.subject || !email.value.body;
+    // });
+
     const prepareEmail = () => {
+      const fullNameStyled = email.value.fullName.trim()
+        ? email.value.fullName
+        : "<inconnu>";
       const mailtoLink = `mailto:${email.value.emailAddress}?subject=${encodeURIComponent(
         email.value.subject
-      )}&body=${encodeURIComponent(email.value.body)}`;
+      )}&body=${encodeURIComponent(
+        "Nom du contact : " + fullNameStyled + "\n\n" + email.value.body
+      )}`;
       window.open(mailtoLink, "_blank");
+
+      email.value = { fullName: "", emailAddress: "", subject: "", body: "" };
+
+      router.push("/");
     };
 
+    // return { email, emailError, prepareEmail };
     return { email, prepareEmail };
   },
 };
