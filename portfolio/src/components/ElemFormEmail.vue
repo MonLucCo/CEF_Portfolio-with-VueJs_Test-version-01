@@ -40,6 +40,10 @@
         <textarea id="body" v-model="email.body" required class="input-field"></textarea>
       </div>
     </div>
+    <p class="note-obligatoire">
+      <span class="obligatoire">Les champs marqué d'un (</span> ) sont à compléter
+      obligatoirement
+    </p>
     <button type="submit" class="submit-button">Préparer l'email</button>
   </form>
 </template>
@@ -73,6 +77,11 @@ export default {
   content: "*";
   color: red;
   margin-left: 4px;
+}
+
+.note-obligatoire {
+  font-size: 0.9em;
+  color: #333;
 }
 
 .flex-container {
