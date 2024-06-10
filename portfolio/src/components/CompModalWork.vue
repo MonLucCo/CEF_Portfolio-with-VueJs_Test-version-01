@@ -1,9 +1,9 @@
 <template>
   <div class="modal-mask" @click.stop="$emit('close')">
-    <div class="modal-container">
+    <div class="modal-container" @clic.stop>
       <h2>{{ title }}</h2>
       <p>{{ text }}</p>
-      <button @click.stop="$emit('close')">Fermer</button>
+      <button @click.stop="$emit('close')">Fermer la modale</button>
     </div>
   </div>
 </template>
