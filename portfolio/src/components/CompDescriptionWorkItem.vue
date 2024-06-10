@@ -91,14 +91,22 @@ export default {
   flex-wrap: wrap;
   width: 100%;
   justify-content: space-around;
-  gap: 20px;
+  justify-items: stretch;
 }
 
 .presentation-description {
   display: flex;
-  flex-direction: column;
+  justify-content: space-around;
+  flex-wrap: wrap;
   margin: 5px;
   padding: 5px;
+  width: 100%;
   border: 1px solid #c5c0c0;
+}
+
+#description-services {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
 </style>
