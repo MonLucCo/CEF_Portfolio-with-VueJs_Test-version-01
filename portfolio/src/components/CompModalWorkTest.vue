@@ -105,7 +105,7 @@ export default {
   max-height: 20%;
 }
 .modal-body {
-  margin: 20px 0;
+  margin: 20px 15px 20px 15px;
 }
 
 .modal-default-button {

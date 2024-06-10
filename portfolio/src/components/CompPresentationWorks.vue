@@ -12,7 +12,7 @@
       <img :src="item.image" alt="Image de l'activité" />
       <p>{{ item.text }}</p>
       <!-- <comp-modal-work v-if="activeModal === index" :title="item.titre" :text="item.text"
-              @close="activeModal = null" /> -->
+                @close="activeModal = null" /> -->
       <comp-modal-work-test v-if="activeModal === index" @close="activeModal = null">
         <template v-slot:header>
           <comp-presentation-work-item :slide="{ text: item.text, image: item.image }" />
@@ -50,9 +50,84 @@ export default {
           image: "/src/assets/images/Avatar_About_16.png",
           details: {
             description: ["Mon texte 1", "Mon texte 2"],
-            workLink: null,
-            services: null,
-            techno: null,
+            workLink: [
+              {
+                href: "/CV-de-Luc-Pérard.pdf",
+                target: "_blank",
+                src: "/Icone_pdf_01.png",
+                alt: "Ouvrir dans un onglet le PDF du CV de PerLucCo",
+              },
+              {
+                href: "https://github.com/MonLucCo",
+                target: "_blank",
+                src: "/Social_GitHub.png",
+                alt: "Page GitHub de PerLucCo",
+              },
+              {
+                href: "https://www.linkedin.com/in/luc-pérard/",
+                target: "_blank",
+                src: "/Social_LinkedIn.png",
+                alt: "Page Linkedin de PerLucCo",
+              },
+            ],
+            services: [
+              { active: true, titre: "Service 1" },
+              { active: false, titre: "Service 2" },
+              { active: true, titre: "Service 3" },
+              { active: false, titre: "Service 4" },
+              { active: false, titre: "Service 5" },
+              { active: true, titre: "Service 6" },
+            ],
+            techno: [
+              {
+                id: 1,
+                label: "HTML",
+                value: 3,
+                gabarit: 10,
+                affiche: true,
+                position: "absolute",
+                image: {
+                  src: "/src/assets/icones/Icone_html5_02.png",
+                  alt: "Icone HTML",
+                },
+              },
+              {
+                id: 2,
+                label: "CSS",
+                value: 5,
+                gabarit: 10,
+                affiche: false,
+                position: "absolute",
+                image: {
+                  src: "/src/assets/icones/Icone_css3_03.png",
+                  alt: "icone CSS",
+                },
+              },
+              {
+                id: 3,
+                label: "JavaScript",
+                value: 6,
+                gabarit: 10,
+                affiche: true,
+                position: "absolute",
+                image: {
+                  src: "/src/assets/icones/Icone_JS_03.png",
+                  alt: "icone JavaScript",
+                },
+              },
+              {
+                id: 4,
+                label: "RPA UI Path",
+                value: 8,
+                gabarit: 10,
+                affiche: false,
+                position: "absolute",
+                image: {
+                  src: "/src/assets/icones/Icone_RPA_03.png",
+                  alt: "icone RPA UI Path",
+                },
+              },
+            ],
           },
         },
         {
