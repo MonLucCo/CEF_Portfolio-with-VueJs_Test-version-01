@@ -11,22 +11,33 @@
       <h2>{{ item.titre }}</h2>
       <img :src="item.image" alt="Image de l'activité" />
       <p>{{ item.text }}</p>
-      <comp-modal-work
-        v-if="activeModal === index"
-        :title="item.titre"
-        :text="item.text"
-        @close="activeModal = null"
-      />
+      <!-- <comp-modal-work v-if="activeModal === index" :title="item.titre" :text="item.text"
+              @close="activeModal = null" /> -->
+      <comp-modal-work-test v-if="activeModal === index" @close="activeModal = null">
+        <template v-slot:header>
+          <comp-presentation-work-item :slide="{ text: item.text, image: item.image }" />
+        </template>
+        <template v-slot:body>
+          <comp-description-work-item :content="item.details" />
+        </template>
+        <template v-slot:footer></template>
+      </comp-modal-work-test>
     </div>
   </div>
 </template>
 
 <script>
+import CompDescriptionWorkItem from "./CompDescriptionWorkItem.vue";
 import CompModalWork from "./CompModalWork.vue";
+import CompModalWorkTest from "./CompModalWorkTest.vue";
+import CompPresentationWorkItem from "./CompPresentationWorkItem.vue";
 
 export default {
   components: {
     CompModalWork,
+    CompModalWorkTest,
+    CompPresentationWorkItem,
+    CompDescriptionWorkItem,
   },
   data() {
     return {
@@ -37,32 +48,43 @@ export default {
           titre: "gestion du temps",
           text: "assistance à la gestion du temps...",
           image: "/src/assets/images/Avatar_About_16.png",
+          details: {
+            description: ["Mon texte 1", "Mon texte 2"],
+            workLink: null,
+            services: null,
+            techno: null,
+          },
         },
         {
           titre: "organisation des activités",
           text: "organisation des activités de projets...",
           image: "/src/assets/images/Avatar_About_17.png",
+          details: { description: null, workLink: null, services: null, techno: null },
         },
         {
           titre: "réduction des charges",
           text:
             "participation à la réduction des charges par transformation numérique...",
           image: "/src/assets/images/Avatar_About_22.png",
+          details: { description: null, workLink: null, services: null, techno: null },
         },
         {
           titre: "sécurisation des accès",
           text: "développement de la sécurisation des accès web et web mobile...",
           image: "/src/assets/images/Avatar_About_26.png",
+          details: { description: null, workLink: null, services: null, techno: null },
         },
         {
           titre: "récompense des employés",
           text: "assistance au développement de la récompense des employés...",
           image: "/src/assets/images/Avatar_About_27.png",
+          details: { description: null, workLink: null, services: null, techno: null },
         },
         {
           titre: "développement de projet",
           text: "conception, codage et développement de projets web et mobile...",
           image: "/src/assets/images/Avatar_About_25.png",
+          details: { description: null, workLink: null, services: null, techno: null },
         },
         // ajoutez plus de diapositives ici...
       ],
