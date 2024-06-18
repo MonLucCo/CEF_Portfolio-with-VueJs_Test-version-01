@@ -2,14 +2,12 @@
   <div class="container">
     <div>
       <div v-if="content.titre" class="title">
-        <!-- <p>{{ content.titre }}</p> -->
         {{ content.titre }}
       </div>
       <div class="element">
         <div v-if="content.image" class="elementImage">
           <img :src="content.image" alt="icone" />
         </div>
-        <!-- <p v-if="content.texte">{{ content.texte }}</p> -->
         {{ content.texte }}
       </div>
     </div>
@@ -46,6 +44,7 @@ export default {
 .elementImage {
   width: 40px;
   height: 40px;
+  flex: 0 0 auto;
   border: 1px solid greenyellow;
   border-radius: 50%;
   padding: 2px;
@@ -54,7 +53,6 @@ export default {
 .elementImage img {
   width: 100%;
   height: 100%;
-  object-fit: content;
   border-radius: 50%;
 }
 </style>

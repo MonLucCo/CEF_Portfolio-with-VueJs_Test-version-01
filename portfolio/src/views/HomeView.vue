@@ -1,20 +1,20 @@
 <template>
   <div class="home">
-    <div id="presentation-texte">
+    <div class="presentation-texte">
       <h1>Bonjour,<br />Bienvenue dans le portfolio de PerLucCo</h1>
       <p>
-        Une accès rapide par le carousel des projets ou un accès détaillé par le menu du
-        portfolio
+        Une vue rapide par le carousel des projets ou un accès détaillé au travaux par le
+        menu du portfolio
       </p>
     </div>
-    <div id="presentation-portfolio">
-      <div id="presentation-travaux">
+    <div class="presentation-portfolio">
+      <div class="presentation-travaux">
         <!-- <comp-carrousel-travaux-image /> -->
         <comp-carrousel-travaux-slide />
       </div>
-      <div id="presentation-photos">
+      <div class="presentation-photos">
         <img src="/Avatar_PerLucCo.png" alt="Avatar de PerLucCo" />
-        <div id="presentation-contact">
+        <div class="presentation-contact">
           <comp-presentation-contact />
         </div>
       </div>
@@ -48,19 +48,19 @@ export default {
   margin: 15px;
 }
 
-#presentation-texte {
+.presentation-texte {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-#presentation-portfolio {
+.presentation-portfolio {
   display: flex;
   justify-content: space-around;
   /* width: 90%; */
 }
 
-#presentation-travaux {
+.presentation-travaux {
   display: flex;
   flex: 2;
   flex-direction: column;
@@ -70,7 +70,7 @@ export default {
   gap: 2em;
 }
 
-#presentation-photos {
+.presentation-photos {
   display: flex;
   flex: 1;
   flex-direction: column;
@@ -79,7 +79,7 @@ export default {
   align-items: center;
 }
 
-#presentation-photos img {
+.presentation-photos img {
   width: 100%;
   height: 100%;
   object-fit: contain;
