@@ -131,7 +131,7 @@ export default {
 }
 
 .submit-button {
-  background-color: #4caf50;
+  background-color: #41b883;
   color: white;
   padding: 14px 20px;
   margin: 8px 0;
@@ -141,6 +141,6 @@ export default {
 }
 
 .submit-button:hover {
-  background-color: #45a049;
+  background-color: #34495e;
 }
 </style>

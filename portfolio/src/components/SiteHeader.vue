@@ -1,6 +1,6 @@
 <template>
   <header>
-    <div id="logo-site">
+    <div class="logo-site">
       <router-link to="/">
         <img
           class="logo"
@@ -10,13 +10,14 @@
           height="125"
         />
       </router-link>
-      <div id="logo-site-presentation">
-        <div id="presentation-button">
-          <router-link to="/">
+      <div class="logo-site-presentation">
+        <div class="presentation-button">
+          <!-- <router-link to="/">
             <button type="button">PerLucCo</button>
-          </router-link>
+          </router-link> -->
+          <router-link to="/" class="home-button">PerLucCo</router-link>
         </div>
-        <div id="presentation-contact">
+        <div class="presentation-contact">
           <comp-presentation-contact v-if="$route.path !== '/'" />
         </div>
       </div>
@@ -53,14 +54,14 @@ header {
   margin: 0 auto;
 }
 
-#logo-site {
+.logo-site {
   display: flex;
   flex: 2;
   justify-content: center;
   align-items: center;
 }
 
-#logo-site-presentation {
+.logo-site-presentation {
   display: flex;
   flex: 2;
   flex-direction: column;
@@ -69,20 +70,32 @@ header {
   height: 100%;
 }
 
-#presentation-button {
+.presentation-button {
   flex: 3;
   align-content: center;
 }
 
-#presentation-contact {
+.presentation-contact {
   flex: 2;
 }
 
-button,
+.home-button,
 nav {
   width: 100%;
   font-size: 24px;
   text-align: center;
+}
+
+.home-button {
+  color: #41b883;
+  background-color: transparent;
+  border: 1px solid #41b883;
+  border-radius: 10%;
+  cursor: pointer;
+}
+
+.home-button:hover {
+  background-color: #34495e;
 }
 
 .wrapper {
@@ -94,7 +107,8 @@ nav {
 }
 
 nav a.router-link-exact-active {
-  color: var(--color-text);
+  color: #34495e;
+  text-decoration: underline wavy #41b883;
 }
 
 nav a.router-link-exact-active:hover {
@@ -104,6 +118,11 @@ nav a.router-link-exact-active:hover {
 nav a {
   padding: 0 1rem;
   border-left: 1px solid var(--color-border);
+  color: #41b883;
+}
+
+nav a:hover {
+  background-color: #34495e;
 }
 
 nav a:first-of-type {
