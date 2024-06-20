@@ -2,14 +2,13 @@
   <div class="about">
     <div class="about-container flex-container">
       <div class="container-presentation col-2 flex-item">
-        <h1>
-          This is an about page. <br />Presentation with some details on which is PerLucCo
-        </h1>
+        <h1>Quelques détails sur PerLucCo</h1>
         <comp-presentation-texte class="transfo-1" />
         <comp-presentation-competences />
       </div>
       <div class="container-presentation col-1 flex-item">
-        <h1>Main skills used for my activities</h1>
+        <h1>Principales compétences pour mes activités</h1>
+        <p>La valeur numérique est affichée pour une activité majeure...</p>
         <comp-presentation-techno class="transfo-2" />
       </div>
       <div class="container-presentation col-2">

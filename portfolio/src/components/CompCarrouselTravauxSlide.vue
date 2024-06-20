@@ -67,9 +67,8 @@ export default {
 
 <style scoped>
 .carousel {
-  /* position: relative; */
-  width: 300px;
-  height: 200px;
+  width: auto;
+  height: auto;
 }
 
 .fade-enter-active,

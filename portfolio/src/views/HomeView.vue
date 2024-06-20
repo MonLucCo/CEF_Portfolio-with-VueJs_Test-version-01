@@ -1,10 +1,10 @@
 <template>
   <div class="home">
     <div class="presentation-texte">
-      <h1>Bonjour,<br />Bienvenue dans le portfolio de PerLucCo</h1>
+      <h1>Bienvenue dans le portfolio de PerLucCo</h1>
       <p>
-        Une vue rapide par le carousel des projets ou un accès détaillé au travaux par le
-        menu du portfolio
+        Une vue rapide par le carousel des projets ou un accès détaillé aux réalisations
+        par le menu <em>Travaux</em> du portfolio
       </p>
     </div>
     <div class="presentation-portfolio">
@@ -46,6 +46,7 @@ export default {
   width: 100%;
   padding: 20px;
   margin: 15px;
+  height: auto;
 }
 
 .presentation-texte {
@@ -57,7 +58,8 @@ export default {
 .presentation-portfolio {
   display: flex;
   justify-content: space-around;
-  /* width: 90%; */
+  gap: 10%;
+  width: 90%;
 }
 
 .presentation-travaux {

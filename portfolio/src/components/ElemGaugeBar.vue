@@ -2,10 +2,10 @@
   <div class="jauge-container">
     <div class="jauge-barre" :style="{ width: largeur + 'px', height: hauteur + 'px' }">
       <div
-        class="jauge-valeur"
+        class="jauge-valeur jauge-couleur-valeur"
         :style="{ width: Math.floor((valeur / gabarit) * 100) + '%' }"
       ></div>
-      <div class="jauge-valeur" :style="{ width: '100%' }"></div>
+      <div class="jauge-valeur jauge-couleur-base" :style="{ width: '100%' }"></div>
     </div>
     <div v-if="afficherValeur">{{ Math.floor((valeur / gabarit) * 100) }}%</div>
   </div>
@@ -56,6 +56,13 @@ export default {
 
 .jauge-valeur {
   height: 50%;
-  background-color: rgb(173, 204, 230);
+}
+
+.jauge-couleur-valeur {
+  background-color: #41b883;
+}
+
+.jauge-couleur-base {
+  background-color: #34495e;
 }
 </style>

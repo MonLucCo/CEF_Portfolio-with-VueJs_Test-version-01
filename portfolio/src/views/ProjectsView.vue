@@ -1,7 +1,7 @@
 <template>
   <div class="projects-container">
-    <h1>This is the projects page<br />Presentation of some Perlucco's works</h1>
-    <p>Click any for more...</p>
+    <h1>Presentation des réalisations de PerLucCo</h1>
+    <p>Pour en savoir plus, sélectionnez une réalisation...</p>
     <comp-presentation-works />
   </div>
 </template>
