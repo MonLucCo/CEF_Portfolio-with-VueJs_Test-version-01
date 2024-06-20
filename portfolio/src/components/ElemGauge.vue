@@ -20,12 +20,12 @@ export default {
 .gauge {
   width: 100px;
   height: 200px;
-  background-color: #eee;
+  background-color: #34495e;
   position: relative;
 }
 
 .gauge__fill {
-  background-color: #00f;
+  background-color: #41b883;
   width: 100%;
   position: absolute;
   bottom: 0;

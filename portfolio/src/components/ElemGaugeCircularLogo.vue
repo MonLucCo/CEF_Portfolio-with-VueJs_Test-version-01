@@ -79,7 +79,7 @@ export default {
 }
 
 .jauge-fg {
-  stroke: yellowgreen;
+  stroke: #41b883;
   transition: stroke-dashoffset 0.35s;
   transform: rotate(90deg);
   transform-origin: 50% 50%;

@@ -32,10 +32,12 @@ export default {
 
 #slide-container {
   display: flex;
-  justify-content: space-around;
+  /* justify-content: space-around; */
   gap: 2em;
   align-items: center;
   justify-content: center;
+  padding: 10px;
+  max-height: 300px;
 }
 
 #presentation-slide {
@@ -46,12 +48,12 @@ export default {
   padding: 10px;
 }
 
-.slide img {
-  /* flex: 1; */
-  width: 100%;
+#image-slide img {
+  width: auto;
   height: auto;
   object-fit: cover;
   border-radius: 5% 0 0 5%;
+  max-height: 280px;
 }
 
 .slide p {
