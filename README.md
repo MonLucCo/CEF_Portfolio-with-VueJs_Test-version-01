@@ -26,14 +26,17 @@ cd portfolio
 ### Compiler et recharger à chaud pour le développement
 
 Pour visualiser rapidement le site Portfolio de PerLucCo, vous pouvez utiliser le serveur de développement `Vite` à partir du terminal de VSCode.
+
 ```sh
 npm run dev
 ```
+
 L'exploitation du lien pour activer l'outil DevTool peut vous permettre de visualiser le fonctionnement dynamique du code.
 
 ### Compiler pour la mise en production
 
-Ce projet, dans cette version v1.0.0, n'a pas la vocation à une mise en oeuvre sur un site de production. Toutefois, pour produire une version pour une exploitation opérationnelle avec un code optimisé, vous pouvez exploiter la commande  de compiation qui produira un dossier `dist` contenant le code opérationnel pour une mise en production.
+Ce projet, dans cette version _v1.0.0_, n'a pas la vocation à une mise en oeuvre sur un site de production. Toutefois, pour produire une version pour une exploitation opérationnelle avec un code optimisé, vous pouvez exploiter la commande de compilation qui produira un dossier `dist` contenant le code opérationnel pour une mise en production.
+
 ```sh
 npm run build
 ```
